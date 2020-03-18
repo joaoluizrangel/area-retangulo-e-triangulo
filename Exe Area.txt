@@ -1,0 +1,78 @@
+package exe1;
+
+public class Exe1 {
+	//variaveis
+	double base;
+	double altura;
+	double area;
+	double areaT;
+	
+	//conta do retangulo
+	void area() {
+		area = base*altura;
+	}
+	//conta do triângulo
+	void areaT() {
+		areaT = base*altura /2;
+		
+	}
+}
+
+---------------------------------------------------------------------------
+
+package exe1;
+
+import java.util.Scanner;
+
+public class ExeP1 {
+	public static void main (String [] args){
+		Scanner in = new Scanner(System.in);
+		
+			//Apresentando variaveis
+			double altura, base, areaT;
+			
+			Exe1 Calculo = new Exe1(); //instanciando
+			
+			//pedindo valores
+			System.out.println("Digite o valor da base");
+			Calculo.base = in.nextDouble();
+			
+			System.out.println("Digite o valor da altura");
+			Calculo.altura= in.nextDouble();
+			
+			Calculo.areaT(); //calculando area do triângulo
+			
+			//apresentando Area do triângulo
+			System.out.println("A base do triângulo é: " + Calculo.areaT);
+	}
+}
+
+-------------------------------------------------------------------
+package exe1;
+
+import java.util.Scanner;
+
+public class ExeP2 {
+	public static void main (String [] args){
+		Scanner in = new Scanner(System.in);
+		
+			//apresentando variaveis
+			double altura, base, area;
+			
+			Exe1 Calculo = new Exe1(); //instanciando
+			
+			//pedindo valores
+			System.out.println("Digite o valor da base");
+			Calculo.base = in.nextDouble();
+			
+			System.out.println("Digite o valor da altura");
+			Calculo.altura= in.nextDouble();
+			
+			Calculo.area(); //calculando area do retangulo
+			
+			//apresentando area do retangulo
+			System.out.println("A base do retangulo é: " + Calculo.area);
+}
+}
+
+------------------------------------------------------------
